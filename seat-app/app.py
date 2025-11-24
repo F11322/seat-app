@@ -54,7 +54,7 @@ if search_btn and search_id:
         # --- 地図に赤丸をつける処理 ---
         try:
             # 画像を読み込む
-            img = Image.open("classroom_map.PNG")
+            img = Image.open("map.png")
             draw = ImageDraw.Draw(img)
 
             # CSVから座標(x, y)を取得
@@ -77,5 +77,6 @@ if search_btn and search_id:
     else:
         # --- 見つからなかった場合 ---
         st.warning("該当する学生番号が見つかりませんでした。番号を確認してください。")
+
 
 
