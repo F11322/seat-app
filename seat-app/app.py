@@ -24,7 +24,7 @@ if not os.path.exists("classroom_map.png"):
 # 2. データを読み込む
 # --------------------------------------------------
 try:
-    df = pd.read_csv("data.csv", encoding='shift_jis') # 文字化けするなら encoding='shift_jis' に変える
+    df = pd.read_csv("data.csv", encoding='utf-8') # 文字化けするなら encoding='shift_jis' に変える
     # 学生番号を文字として扱う
     df["student_id"] = df["student_id"].astype(str)
 except Exception as e:
@@ -77,3 +77,4 @@ if search_btn and search_id:
     else:
         # --- 見つからなかった場合 ---
         st.warning("該当する学生番号が見つかりませんでした。番号を確認してください。")
+
